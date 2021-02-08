@@ -18,16 +18,18 @@ class App extends React.Component {
             headerExpanded: !message,
             suggestedNames: message ? name(message) : []
         });
-        console.log("Input text is", message);
 
     }
     render() {
 
         return (
-            <div><h1>Hello</h1><Header
-                headTitle={this.state.headerText}
-                headerExpanded={this.state.headerExpanded}
-            />
+            <div><p className="myclass">Ever wondered what name your project should have? Then you are at the right place...<br>
+            </br>Type a keyword and we will help you get an ideal name for your project..
+            <br></br>
+            You will also know whether the domain of your selected name exists or not...</p><Header
+                    headTitle={this.state.headerText}
+                    headerExpanded={this.state.headerExpanded}
+                />
                 <SearchBox onInputChange={this.handleInputChange} />
                 <ResultsContainer suggestedNames={this.state.suggestedNames} />
             </div>
